@@ -13,10 +13,10 @@ print(posurl)
 response = requests.get(posurl)
 # Getting response info 
 def get_shade_status():
-	if response.status_code == 200:
-		return response.json()["shutter"]["currentPos"]["position"]
-	else:
-		return None
+    if response.status_code == 200:
+       return response.json()["shutter"]["currentPos"]["position"]
+    else:
+       return None
 # Shutter position
 def set_shade_position(position):
     url = f"http://{device_ip}/s/p/{position}"
